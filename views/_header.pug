@@ -1,0 +1,17 @@
+header.header
+    nav.nav.nav--course(style="margin-bottom: 50px;")
+        a.nav__el(href='/allloans' style="padding-top: 55px;white-space: nowrap;") All loans
+    nav.nav.nav--course(style="margin-bottom: 50px;") 
+        a.nav__el(href='/overview' style="padding-top: 55px;white-space: nowrap;padding-left: 20px;") Dashboard
+    nav.nav.nav--course(style="margin-left: 34px;")     
+        a(style="font-size: 35px;color: cornsilk;white-space: nowrap;padding-left: 260px;") Loan Application
+    .header__logo
+        img(src='img/loans.png' alt='Loans logo') 
+    nav.nav.nav--user
+    if !authorized
+        a.nav__el.nav__el(href='/login') Login
+        a.nav__el.nav__el(href='/signup' style="white-space: nowrap;") Sign Up
+    if authorized    
+        a.nav__el(href='/logout')
+            img.nav__user-img(src='/img/users/user.png' alt='user phpto')
+            span Logout 

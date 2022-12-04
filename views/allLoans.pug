@@ -1,0 +1,31 @@
+extends baseTemplate
+block content 
+  h2(style="margin-top:5px;margin-bottom: 10px;") Loan List
+  div
+    table#loan.display.stripe.hover.cell-border.compact(style='width:100%;')
+      thead(style="font-size:13px")
+        tr
+          th(scope='ID') Customer ID
+          th(scope='col') Customer Name
+          th(scope='col') Phone Number
+          th(scope='col') Address
+          th(scope='col') Amount Per Month
+          th(scope='col') Interest
+          th(scope='col') Loan Term Years
+          th(scope='col') Loan Type
+          th(scope='col') Description
+          th(scope='col') Created date
+      tbody
+        each loan in loans ? loans : []  
+          tr.table-secondary(style="font-size:13px")
+            td=loan.id
+            td=loan.customerName
+            td=loan.phoneNumber
+            td=loan.address
+            td=loan.amountPerMonth
+            td=loan.interest
+            td=loan.loanTermYears
+            td=loan.loanType
+            td=loan.description
+            td=loan.createdDate
+ 

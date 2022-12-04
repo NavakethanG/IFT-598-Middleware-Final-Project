@@ -1,0 +1,57 @@
+[
+    {
+        "id": "0",
+        "customerName": "Jerome Taylor",
+        "phoneNumber": "+1 623 768 9853",
+        "address": "1255 E University Dr,Tempe, AZ 85281",
+        "amountPerMonth": "250",
+        "interest": "6",
+        "loanTermYears": "4",
+        "loanType": "Student loan",
+        "description": "This is student loan with an interest rate of 5 percent"
+    },
+    {
+        "id": "1",
+        "customerName": "Megan Fox",
+        "phoneNumber": "+1 623 123 9854",
+        "address": "958 Lemon St,Tempe, AZ 85281",
+        "amountPerMonth": "230",
+        "interest": "4",
+        "loanTermYears": "5",
+        "loanType": "Home loan",
+        "description": "This is home loan with an interest rate of 4 percent"
+    },
+    {
+        "id": "2",
+        "customerName": "Mark Dwain",
+        "phoneNumber": "+1 623 234 0809",
+        "address": "406 Forest Ave,Tempe, AZ 85281",
+        "amountPerMonth": "450",
+        "interest": "6",
+        "loanTermYears": "3",
+        "loanType": "Mortgage loan",
+        "description": "This is mortgage loan with an interest rate of 6 percent"
+    },
+    {
+        "id": "3",
+        "customerName": "Ann Hathaway",
+        "phoneNumber": "+1 623 987 3456",
+        "address": "300 Normal ave,Tempe, AZ 85281",
+        "amountPerMonth": "380",
+        "interest": "4.5",
+        "loanTermYears": "5",
+        "loanType": "Home loan",
+        "description": "This is home loan with an interest rate of 4.5 percent"
+    },
+    {
+        "id": "4",
+        "customerName": "Chris Hemsworth",
+        "phoneNumber": "+1 623 098 8767",
+        "address": "200 College Ave,Tempe, AZ 85281",
+        "amountPerMonth": "560",
+        "interest": "2.5",
+        "loanTermYears": "10",
+        "loanType": "Student loan",
+        "description": "This is student loan with an interest rate of 2.5 percent"
+    }
+]

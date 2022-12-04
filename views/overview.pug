@@ -1,0 +1,43 @@
+extends baseTemplate
+
+block content
+    h2(style="margin-top:20px;") Welcome #{userName}
+    h4(style="margin-top:20px;color:#a36e1b;") This is a loan application created as part of the Fall'22 IFT 598: Middleware programming and database security course.
+    h4(style="margin-top:20px;font-weight: bold;") About the application: 
+    p(style="margin-top:20px;color:#a36e1b;") The main idea behind the application is to allow users to sign up and login into the loan application and view the list of loans. 
+    p(style="margin-top:20px;color:#a36e1b;") Once a user is authenticated they will be able to view the list of loans. The loan list is fetched from the MongoDB atlas database. 
+    p(style="margin-top:20px;color:#a36e1b;") User also has an option to export the loans to an excel using the "Export to excel" option available in the ALL LOANS screen.
+    h2(style="margin-top:20px") Click on "Add Loan" to create a new loan
+    button.btn.btn-primary.btn-sm(type='button', data-toggle="modal" 
+    data-target="#myModal" style="margin-left: 378px;margin-top: -35px;font-size: 15px;width: 90px;padding-bottom: 5px;border-radius: 0.5rem;") Add Loan
+
+    #myModal.modal
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h4.modal-title(style="margin-bottom:440px;;font-size:20px") Add Loan
+                    .modal-body
+                     form(action='/loans' method='post')
+                         label(for='CustomerName' style="display:flex;font-size:15px") Customer Name:
+                                input#CustomerName.form-control(type="text" style="margin-left:45px;width:170px" name="customerName")
+                         label(for='phoneNumber' style="display:flex;margin-top: 15px;font-size:15px") Phone Number:
+                                input#PhoneNumber.form-control(type="text" style="margin-left:54px;width:170px" name="phoneNumber")
+                         label(for='Address' style="display:flex;margin-top: 15px;font-size:15px") Address:
+                                input#Address.form-control(type="text" style="margin-left:100px;width:170px" name="address")
+                         label(for='AmountPerMonth' style="display:flex;margin-top: 15px;font-size:15px") Amount Per Month($):
+                                input#AmountPerMonth.form-control(type="text" style="margin-left:9px;width:170px" name="amountPerMonth") 
+                         label(for='Interest' style="display:flex;margin-top: 15px;font-size:15px") Interest:
+                                input#Interest.form-control(type="text" style="margin-left:105px;width:170px" name="interest") 
+                         label(for='LoanTermYears' style="display:flex;margin-top: 15px;font-size:15px") Loan Term Years:
+                                input#LoanTermYears.form-control(type="text" style="margin-left:43px;width:170px" name="loanTermYears")                             
+                         label(for='LoanType' style="margin-top: 22px;font-size:15px") Loan Type:       
+                         select#LoanType.custom-select.mb-3(name="loanType" style="margin-left:86px;font-size:15px")
+                             option(value='Home Loan') Home Loan
+                             option(value='Student Loan') Student Loan
+                             option(value='Mortgage Loan') Mortgage Loan
+                             option(value='Personal Loan') Personal Loan
+                             option(value='Auto Loan') Auto Loan
+                         label(for='Description' style="display:flex;margin-top: 15px;font-size:15px") Description:
+                             input#Description.form-control(type="text" style="margin-left:78px;width:170px" name="description")
+                         button.btn.btn-info(type='submit' value="Submit" style="margin-top: 35px;font-size: 15px;width: 90px;padding-bottom: 5px;border-radius: 0.5rem;") Submit
+                         button.btn.btn-danger(type='button' data-dismiss='modal' style="margin-left: 30px;margin-top: 35px;font-size: 15px;width: 90px;padding-bottom: 5px;border-radius: 0.5rem;") Close    
